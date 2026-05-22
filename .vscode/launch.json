@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "clinic_portfolio (debug)",
+            "cwd": "clinic_portfolio",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "clinic_portfolio (profile)",
+            "cwd": "clinic_portfolio",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "clinic_portfolio (release)",
+            "cwd": "clinic_portfolio",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
