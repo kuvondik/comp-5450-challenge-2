@@ -11,13 +11,34 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.8
+  provider: ^6.1.2
+  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/branding/launcher_icon.png"
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/branding/launcher_icon.png"
+  macos:
+    generate: true
+    image_path: "assets/branding/launcher_icon.png"
+  web:
+    generate: true
+    image_path: "assets/branding/launcher_icon.png"
+    background_color: "#FFFFFF"
 
 flutter:
-
   uses-material-design: true
+  assets:
+    - assets/branding/
+    - assets/images/
+    - assets/svgs/
