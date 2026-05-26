@@ -23,6 +23,8 @@ class TeamMemberCard extends StatelessWidget {
               CircleAvatar(
                 radius: 28,
                 backgroundColor: AppColors.primary.withValues(alpha: 0.1),
+                foregroundImage: NetworkImage(member.imageUrl),
+                onForegroundImageError: (_, error) {},
                 child: Text(
                   member.initials,
                   style: text.titleLarge?.copyWith(color: AppColors.primary),

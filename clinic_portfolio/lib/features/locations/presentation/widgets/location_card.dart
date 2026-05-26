@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../app/theme/app_colors.dart';
 import '../../domain/entities/clinic_location.dart';
@@ -35,10 +36,10 @@ class LocationCard extends StatelessWidget {
             ContactRow(icon: Icons.home_outlined, text: location.address),
             const SizedBox(height: 8),
             for (final phone in location.phones) ...[
-              ContactRow(icon: Icons.phone_outlined, text: phone),
+              ContactRow.phone(text: phone),
               const SizedBox(height: 8),
             ],
-            ContactRow(icon: Icons.email_outlined, text: location.email),
+            ContactRow.email(text: location.email),
             const SizedBox(height: 16),
             Text('Hours', style: text.titleLarge?.copyWith(fontSize: 16)),
             const SizedBox(height: 8),
@@ -71,18 +72,56 @@ class LocationCard extends StatelessWidget {
 class ContactRow extends StatelessWidget {
   final IconData icon;
   final String text;
-  const ContactRow({super.key, required this.icon, required this.text});
+  final Uri? uri;
+
+  const ContactRow({
+    super.key,
+    required this.icon,
+    required this.text,
+    this.uri,
+  });
+
+  ContactRow.phone({super.key, required String text})
+      : icon = Icons.phone_outlined,
+        text = text,
+        uri = Uri(scheme: 'tel', path: text.replaceAll(RegExp(r'\D'), ''));
+
+  ContactRow.email({super.key, required String text})
+      : icon = Icons.email_outlined,
+        text = text,
+        uri = Uri(scheme: 'mailto', path: text);
+
+  Future<void> _launchContactAction() async {
+    final target = uri;
+    if (target == null) return;
+    await launchUrl(target);
+  }
 
   @override
   Widget build(BuildContext context) {
-    final style = Theme.of(context).textTheme.bodyMedium;
-    return Row(
+    final isActionable = uri != null;
+    final style = Theme.of(context).textTheme.bodyMedium?.copyWith(
+          color: isActionable ? AppColors.primary : null,
+          decoration: isActionable ? TextDecoration.underline : null,
+        );
+    final row = Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Icon(icon, size: 18, color: AppColors.primary),
         const SizedBox(width: 10),
         Expanded(child: Text(text, style: style)),
       ],
+    );
+
+    if (!isActionable) return row;
+
+    return InkWell(
+      onTap: _launchContactAction,
+      borderRadius: BorderRadius.circular(8),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 2),
+        child: row,
+      ),
     );
   }
 }
