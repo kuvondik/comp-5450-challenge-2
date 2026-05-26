@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../app/theme/app_colors.dart';
 import '../../../../shared/constants/app_constants.dart';
@@ -131,6 +132,11 @@ class _Hero extends StatelessWidget {
   final VoidCallback onBook;
   const _Hero({required this.onBook});
 
+  Future<void> _openBookAppointment() async {
+    final uri = Uri.parse(AppConstants.bookAppointmentUrl);
+    await launchUrl(uri, mode: LaunchMode.externalApplication);
+  }
+
   @override
   Widget build(BuildContext context) {
     final text = Theme.of(context).textTheme;
@@ -197,7 +203,7 @@ class _Hero extends StatelessWidget {
                 Row(
                   children: [
                     ElevatedButton.icon(
-                      onPressed: onBook,
+                      onPressed: _openBookAppointment,
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
                         foregroundColor: AppColors.primary,

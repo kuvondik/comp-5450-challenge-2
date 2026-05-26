@@ -8,6 +8,8 @@ class TeamMemberModel extends TeamMember {
     required super.specialty,
     required super.bio,
     required super.initials,
+    required super.imageUrl,
+    required super.bookingUrl,
   });
 
   factory TeamMemberModel.fromMap(Map<String, dynamic> map) {
@@ -18,6 +20,8 @@ class TeamMemberModel extends TeamMember {
       specialty: map['specialty'] as String,
       bio: map['bio'] as String,
       initials: map['initials'] as String,
+      imageUrl: map['imageUrl'] as String,
+      bookingUrl: map['bookingUrl'] as String,
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../app/theme/app_colors.dart';
 import '../../domain/entities/team_member.dart';
@@ -19,6 +20,8 @@ class TeamMemberDetailPage extends StatelessWidget {
             child: CircleAvatar(
               radius: 52,
               backgroundColor: AppColors.primary.withValues(alpha: 0.12),
+              foregroundImage: NetworkImage(member.imageUrl),
+              onForegroundImageError: (_, error) {},
               child: Text(
                 member.initials,
                 style: text.displayLarge?.copyWith(
@@ -55,7 +58,10 @@ class TeamMemberDetailPage extends StatelessWidget {
           Text(member.bio, style: text.bodyLarge),
           const SizedBox(height: 28),
           ElevatedButton.icon(
-            onPressed: () => Navigator.of(context).pop(),
+            onPressed: () async {
+              final uri = Uri.parse(member.bookingUrl);
+              await launchUrl(uri, mode: LaunchMode.externalApplication);
+            },
             icon: const Icon(Icons.calendar_month),
             label: const Text('Book with this practitioner'),
           ),

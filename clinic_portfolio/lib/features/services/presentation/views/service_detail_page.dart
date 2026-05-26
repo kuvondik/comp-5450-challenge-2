@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../app/theme/app_colors.dart';
 import '../../domain/entities/clinic_service.dart';
@@ -70,7 +71,13 @@ class ServiceDetailPage extends StatelessWidget {
           ),
           const SizedBox(height: 24),
           ElevatedButton.icon(
-            onPressed: () => Navigator.of(context).pop(),
+            onPressed: () async {
+              final uri = Uri.parse(service.bookingUrl);
+              await launchUrl(
+                uri,
+                mode: LaunchMode.externalApplication,
+              );
+            },
             icon: const Icon(Icons.calendar_month),
             label: const Text('Book this service'),
           ),

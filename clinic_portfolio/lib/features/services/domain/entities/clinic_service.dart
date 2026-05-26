@@ -6,6 +6,7 @@ class ClinicService {
   final String name;
   final String shortDescription;
   final String longDescription;
+  final String bookingUrl;
   final IconData icon;
 
   const ClinicService({
@@ -13,6 +14,7 @@ class ClinicService {
     required this.name,
     required this.shortDescription,
     required this.longDescription,
+    required this.bookingUrl,
     required this.icon,
   });
 }

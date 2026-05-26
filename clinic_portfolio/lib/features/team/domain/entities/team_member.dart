@@ -8,6 +8,8 @@ class TeamMember {
   final String specialty;
   final String bio;
   final String initials;
+  final String imageUrl;
+  final String bookingUrl;
 
   const TeamMember({
     required this.id,
@@ -16,5 +18,7 @@ class TeamMember {
     required this.specialty,
     required this.bio,
     required this.initials,
+    required this.imageUrl,
+    required this.bookingUrl,
   });
 }

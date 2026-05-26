@@ -8,6 +8,7 @@ class ClinicServiceModel extends ClinicService {
     required super.name,
     required super.shortDescription,
     required super.longDescription,
+    required super.bookingUrl,
     required super.icon,
   });
 
@@ -17,6 +18,7 @@ class ClinicServiceModel extends ClinicService {
       name: map['name'] as String,
       shortDescription: map['shortDescription'] as String,
       longDescription: map['longDescription'] as String,
+      bookingUrl: map['bookingUrl'] as String,
       // ignore: non_const_argument_for_const_parameter
       icon: IconData(map['iconCode'] as int, fontFamily: 'MaterialIcons'),
     );
@@ -27,6 +29,7 @@ class ClinicServiceModel extends ClinicService {
         'name': name,
         'shortDescription': shortDescription,
         'longDescription': longDescription,
+        'bookingUrl': bookingUrl,
         'iconCode': icon.codePoint,
       };
 }

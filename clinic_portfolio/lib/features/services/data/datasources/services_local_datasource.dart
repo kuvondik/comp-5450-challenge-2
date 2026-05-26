@@ -21,6 +21,7 @@ class ServicesLocalDataSourceImpl implements ServicesLocalDataSource {
             'Our family physicians provide preventive care, chronic disease '
             'management, pediatric checkups, and ongoing support for the '
             'whole family — with same-day appointments available.',
+        bookingUrl: 'https://infinityhealthcentre.com/book-an-appointment/',
         icon: Icons.family_restroom,
       ),
       ClinicServiceModel(
@@ -31,6 +32,7 @@ class ServicesLocalDataSourceImpl implements ServicesLocalDataSource {
             'Visit either of our locations during walk-in hours. Our team '
             'handles colds, infections, minor injuries, prescription refills '
             'and a wide range of urgent but non-emergency needs.',
+        bookingUrl: 'https://infinityhealthcentre.com/book-an-appointment/',
         icon: Icons.local_hospital,
       ),
       ClinicServiceModel(
@@ -41,6 +43,8 @@ class ServicesLocalDataSourceImpl implements ServicesLocalDataSource {
             'Registered physiotherapists assess, diagnose and treat acute '
             'injuries, post-surgical recovery, and chronic musculoskeletal '
             'conditions using evidence-based manual therapy and exercise.',
+        bookingUrl:
+            'https://infinityhealthcentre.janeapp.com/locations/infinity-health-centre-toronto/book#/physiotherapy',
         icon: Icons.accessibility_new,
       ),
       ClinicServiceModel(
@@ -51,6 +55,8 @@ class ServicesLocalDataSourceImpl implements ServicesLocalDataSource {
             'Chiropractic care focuses on the diagnosis and treatment of '
             'neuromuscular disorders, with an emphasis on the spine. Helps '
             'with back pain, neck pain, headaches, and posture-related issues.',
+        bookingUrl:
+            'https://infinityhealthcentre.janeapp.com/locations/infinity-health-centre-toronto/book#/chiropractic',
         icon: Icons.self_improvement,
       ),
       ClinicServiceModel(
@@ -61,6 +67,8 @@ class ServicesLocalDataSourceImpl implements ServicesLocalDataSource {
             'Naturopathic doctors blend modern science with traditional '
             'therapies — nutrition, botanical medicine, acupuncture and '
             'lifestyle counselling — to address root causes.',
+        bookingUrl:
+            'https://infinityhealthcentre.janeapp.com/locations/infinity-health-centre-toronto/book#/staff_member/7',
         icon: Icons.spa,
       ),
       ClinicServiceModel(
@@ -71,6 +79,8 @@ class ServicesLocalDataSourceImpl implements ServicesLocalDataSource {
             'Manual osteopathy uses gentle pressure, stretching and '
             'manipulation to relieve pain, improve mobility, and support the '
             'body\'s natural ability to heal.',
+        bookingUrl:
+            'https://infinityhealthcentre.janeapp.com/locations/infinity-health-centre-toronto/book#/staff_member/13',
         icon: Icons.healing,
       ),
       ClinicServiceModel(
@@ -81,6 +91,8 @@ class ServicesLocalDataSourceImpl implements ServicesLocalDataSource {
             'Our registered psychotherapists offer individual and couples '
             'sessions for anxiety, depression, stress, grief, life '
             'transitions, and trauma — in person or virtually.',
+        bookingUrl:
+            'https://infinityhealthcentre.janeapp.com/locations/infinity-health-centre-toronto/book#/psychotherapy',
         icon: Icons.psychology,
       ),
       ClinicServiceModel(
@@ -91,6 +103,8 @@ class ServicesLocalDataSourceImpl implements ServicesLocalDataSource {
             'Registered Massage Therapists provide deep tissue, Swedish, '
             'sports, prenatal and relaxation massage — often covered by '
             'extended health benefits.',
+        bookingUrl:
+            'https://infinityhealthcentre.janeapp.com/locations/infinity-health-centre-toronto/book#/massage-therapy',
         icon: Icons.spa_outlined,
       ),
       ClinicServiceModel(
@@ -101,6 +115,8 @@ class ServicesLocalDataSourceImpl implements ServicesLocalDataSource {
             'Acupuncture is used to manage chronic pain, migraines, sports '
             'injuries, and stress. Our practitioners combine traditional '
             'techniques with contemporary medical understanding.',
+        bookingUrl:
+            'https://infinityhealthcentre.janeapp.com/locations/infinity-health-centre-toronto/book#/staff_member/1/treatment/36',
         icon: Icons.medical_services,
       ),
       ClinicServiceModel(
@@ -111,6 +127,8 @@ class ServicesLocalDataSourceImpl implements ServicesLocalDataSource {
             'Custom-made orthotics correct biomechanical foot issues and '
             'relieve pain in the feet, knees, hips and lower back. Includes '
             'gait analysis and fitting.',
+        bookingUrl:
+            'https://infinityhealthcentre.janeapp.com/locations/infinity-health-centre-toronto/book#/discipline/8/treatment/58',
         icon: Icons.directions_walk,
       ),
       ClinicServiceModel(
@@ -121,6 +139,8 @@ class ServicesLocalDataSourceImpl implements ServicesLocalDataSource {
             'Medical-grade compression stockings to support venous return, '
             'reduce swelling and treat varicose veins. Professional fitting '
             'available.',
+        bookingUrl:
+            'https://infinityhealthcentre.janeapp.com/locations/infinity-health-centre-toronto/book#/staff_member/1/treatment/73',
         icon: Icons.fitness_center,
       ),
       ClinicServiceModel(
@@ -131,6 +151,8 @@ class ServicesLocalDataSourceImpl implements ServicesLocalDataSource {
             'Specialized rehabilitation for vertigo, BPPV, post-concussion '
             'dizziness and balance disorders — helping you regain stability '
             'and confidence.',
+        bookingUrl:
+            'https://infinityhealthcentre.janeapp.com/locations/infinity-health-centre-toronto/book#/staff_member/9',
         icon: Icons.balance,
       ),
       ClinicServiceModel(
@@ -140,6 +162,8 @@ class ServicesLocalDataSourceImpl implements ServicesLocalDataSource {
         longDescription:
             'Custom and off-the-shelf bracing for knees, ankles, wrists and '
             'more — for injury recovery, arthritis support, and sport.',
+        bookingUrl:
+            'https://infinityhealthcentre.janeapp.com/locations/infinity-health-centre-toronto/book#/staff_member/1/treatment/124',
         icon: Icons.airline_seat_legroom_extra,
       ),
       ClinicServiceModel(
@@ -149,6 +173,8 @@ class ServicesLocalDataSourceImpl implements ServicesLocalDataSource {
         longDescription:
             'Convenient on-site collection for routine bloodwork, screening '
             'panels and physician-ordered diagnostics.',
+        bookingUrl:
+            'https://infinityhealthcentre.janeapp.com/locations/infinity-health-centre-toronto/book#/staff_member/7',
         icon: Icons.science,
       ),
       ClinicServiceModel(
@@ -159,6 +185,8 @@ class ServicesLocalDataSourceImpl implements ServicesLocalDataSource {
             'Multidisciplinary concussion management — assessment, vestibular '
             'therapy, vision, exertion testing and gradual return to school, '
             'work and sport.',
+        bookingUrl:
+            'https://infinityhealthcentre.janeapp.com/locations/infinity-health-centre-toronto/book#/staff_member/9',
         icon: Icons.psychology_alt,
       ),
       ClinicServiceModel(
@@ -168,6 +196,7 @@ class ServicesLocalDataSourceImpl implements ServicesLocalDataSource {
         longDescription:
             'Destination-specific risk assessments, vaccinations, malaria '
             'prophylaxis prescriptions and travel health advice.',
+        bookingUrl: 'https://infinityhealthcentre.janeapp.com/',
         icon: Icons.flight_takeoff,
       ),
       ClinicServiceModel(
@@ -177,6 +206,7 @@ class ServicesLocalDataSourceImpl implements ServicesLocalDataSource {
         longDescription:
             'Skin lesion removal, cryotherapy, joint injections, suturing '
             'and other minor procedures performed by qualified physicians.',
+        bookingUrl: 'https://infinityhealthcentre.janeapp.com/',
         icon: Icons.cut,
       ),
     ];
